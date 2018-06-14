@@ -24,3 +24,9 @@ def printMatrix(matrix):
         for column in range(len(matrix[row])):
             print("%d\t" % matrix[row][column], end='')
         print()
+
+
+matrix = [[2, 3, 5], [1, 3, 4], [56, 7, 1]]
+
+sumMatrix(matrix)
+printMatrix(matrix)

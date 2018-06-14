@@ -12,7 +12,7 @@ import turtle
 import myturtle
 
 # Window Settings
-wn = turtle.Screen
+wn = turtle.Screen()
 wn.bgcolor("lightblue")
 wn.screensize(1920 * 2, 1080 * 2)
 

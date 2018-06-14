@@ -15,14 +15,14 @@ print()
 
 while(True):
     try:
-        myinput = input("enter a number: ")
-        n = int(myinput) # Typecasting to Integer! # It is bug-prone
+        myInput = input("enter a number: ")
+        n = int(myInput) # Typecasting to Integer! # It is bug-prone
         # Must be treated with exception handling
     except ValueError:
-        if(myinput == "break"): # True or False: a Boolean value. Bool
+        if(myInput == "break"): # True or False: a Boolean value. Bool
             print("'BREAK' is entered. Terminating the program in user' wish.")
             for i in range(20):
-                makeMeLookLikeBusy();
+                makeMeLookLikeBusy()
             break
 
         mistakes = mistakes + 1

@@ -29,10 +29,11 @@ def grep(pattern):
 #     print "second time", j+10
 
 import itertools
+import functools as func
 
 horses = [1, 2, 3, 4]
 races = list(itertools.permutations(horses))
 for i in races:
-    print reduce(lambda x, y : x + y, (y for y in i))
-print '####'
-print races
+    print(func.reduce(lambda x, y : x + y, (y for y in i)))
+print('####')
+print(races)

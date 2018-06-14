@@ -25,7 +25,7 @@ def create_pass(digits):
 
     # generating the actual password and assigning it to a string:
     req_chars = input("Do you want 'required_characters'? Answer y/n.\n")
-    for i in range(digits):
+    for _ in range(digits):
         if (req_chars == 'y'):
             from_list = random.choice(two_lists)
             character = random.choice(from_list)

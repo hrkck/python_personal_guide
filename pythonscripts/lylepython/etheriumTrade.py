@@ -8,7 +8,7 @@ etheriumWallet = 10.0 # I got 10 ETH in the first place
 while dollarWallet < 1000: # the goal is to reach 1000 USD
 
     # Amounts to invest:
-    # I made up these first two number. It is an investment strategy  I choosed. Could be something else.
+    # I made up these first two number. It is an investment strategy  I chose. Could be something else.
     USD_ToSell = 10.0 # There is no particular reason why it is 10. See below.
     ETH_ToSell = 2 # There is no particular reason why it is '0.1'. See below.
     ETH_ToBuy = 0.0 # Because we haven't calculated yet. See below.
@@ -31,7 +31,7 @@ while dollarWallet < 1000: # the goal is to reach 1000 USD
 
     if(currentEtherium <= 0): # If ETH goes below 0 USD. This can happen and we don't want this. It is not realistic.
         currentEtherium = 1 # Reset the value of ETH
-        continue; # Ignore rest of the loop and start again. You may want to look what 'continue' is on internet. Also check what "break" does.
+        continue # Ignore rest of the loop and start again. You may want to look what 'continue' is on internet. Also check what "break" does.
 
     # NOTE: Now our pretty simple strategy to invest money comes:
     # Normally we ought to use highly complex finance strategies, I guess.
@@ -40,12 +40,12 @@ while dollarWallet < 1000: # the goal is to reach 1000 USD
     if(currentEtherium < 0.5): # When ETH is cheap enough to BUY!
         if(dollarWallet >= 10): # When we have more than 10 USD
             dollarWallet = dollarWallet - USD_ToSell # we invested some USD.
-            ETH_ToBuy =  USD_ToSell / currentEtherium # Makes sense right? SinnVoll  ^^ .
+            ETH_ToBuy =  USD_ToSell / currentEtherium # Makes sense right? ^^ .
             # Actually, I am not sure if this calculation is correct. I don't really know how economics work. But we can improve the code as we go through it in the future.
             etheriumWallet = etheriumWallet + ETH_ToBuy # now we have ETH
         if(dollarWallet < 10): # When we are running out of USD!
             USD_ToSell = dollarWallet # We will invest all the money!
-            dollarWallet = dollarWallet - dollarWallet # we just nvested all money we have! Now we have 0 USD!
+            dollarWallet = dollarWallet - dollarWallet # we just invested all money we have! Now we have 0 USD!
             ETH_ToBuy = USD_ToSell / currentEtherium
             etheriumWallet = etheriumWallet + ETH_ToBuy # now we have ETH
         if(dollarWallet == 0):
